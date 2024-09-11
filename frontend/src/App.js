@@ -2,13 +2,15 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './AuthContext'; // Import AuthProvider and useAuth for authentication
 import './App.css'; // Ensure you have global styles here
-import Home from './Components/Home';
-import IdeasSubmit from './Components/IdeasSubmit';
-import IdeasGallery from './Components/IdeasGallery';
-import About from './Components/About';
-import Login from './Components/Login';
-import Signup from './Components/Signup';
-import Header from './Components/Header'; // Import Header
+import Home from './Components/Home/Home';
+import IdeasSubmit from './Components/Header/IdeasSubmit';
+import IdeasGallery from './Components/Header/IdeasGallery';
+import About from './Components/Header/About';
+
+
+import Header from './Components/Header/Header'; // Import Header
+import Login from './Components/Login/Login';
+import Signup from './Components/Login/Signup';
 
 const ProtectedRoute = ({ children }) => {
   const { isAuthenticated } = useAuth();
